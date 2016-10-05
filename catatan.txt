@@ -1,0 +1,19 @@
+Is
+=>Model
+=>Desain Form
+
+eka
+=>Controller
+=>TableModel
+
+apif
+=>Dao(dao dan daoImpl)
+
+
+
+
+ketentuan :
+1. nama kelas harus di awali dengan huruf besar(ex. "KelasModel")
+2. nama kelas harus mengikuti ketentuan package(ex. jika package view maka nama kelas "KelasView", jika package controller maka "KelasController", dan seterusnya)
+3. nama variable diawali huruf kecil(ex. belajarJava, tableBarang, kelasKontrol)
+4. untuk lebih jelasnya silakan ikuti contoh
