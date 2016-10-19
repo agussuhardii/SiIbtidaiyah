@@ -1,6 +1,8 @@
 
 package com.tonewbie.siibtidaiyah.model;
 
+import com.tonewbie.siibtidaiyah.model.enumfile.KeteranganPelajaranEnum;
+import com.tonewbie.siibtidaiyah.model.enumfile.SmesterEnum;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,8 +16,8 @@ public class RapotModel implements Serializable{
     @Column(name = "id_Raport", length = 2)        
     String idRaport;
     
-    @Column(name = "id_Siswa", length = 50)
-    String idSiswa;   
+    @Column(name = "nis", length = 50)
+    String nis;   
     
     @Column(name = "id_Kelas", length = 50)
     String idKelas; 
@@ -38,8 +40,10 @@ public class RapotModel implements Serializable{
     @Column(name = "catatan_guru", length = 50)
     String catatanGuru; 
     
-    
-public String getIdRaport() {
+    SmesterEnum smester;
+    KeteranganPelajaranEnum keterangan;
+
+    public String getIdRaport() {
         return idRaport;
     }
 
@@ -47,58 +51,87 @@ public String getIdRaport() {
         this.idRaport = idRaport;
     }
 
-public String getIdSiswa() {
-        return idSiswa;
+    public String getNis() {
+        return nis;
     }
 
-    public void setIdSiswa(String idSiswa) {
-        this.idSiswa = idSiswa;
+    public void setNis(String nis) {
+        this.nis = nis;
     }
-    
-public String getIdKelas() {
+
+    public String getIdKelas() {
         return idKelas;
     }
 
     public void setIdKelas(String idKelas) {
         this.idKelas = idKelas;
     }
-    
-public String getIdPelajaran() {
+
+    public String getIdPelajaran() {
         return idPelajaran;
     }
 
     public void setIdPelajaran(String idPelajaran) {
         this.idPelajaran = idPelajaran;
-    }    
-public Integer getTahunPelajaran() {
+    }
+
+    public Integer getTahunPelajaran() {
         return tahunPelajaran;
+    }
+
+    public void setTahunPelajaran(Integer tahunPelajaran) {
+        this.tahunPelajaran = tahunPelajaran;
+    }
+
+    public String getKkm() {
+        return kkm;
     }
 
     public void setKkm(String kkm) {
         this.kkm = kkm;
     }
-    
-public Integer getNilaiAngka() {
+
+    public Integer getNilaiAngka() {
         return nilaiAngka;
     }
 
     public void setNilaiAngka(Integer nilaiAngka) {
         this.nilaiAngka = nilaiAngka;
-    } 
-public String getNilaiHuruf() {
+    }
+
+    public String getNilaiHuruf() {
         return nilaiHuruf;
     }
 
     public void setNilaiHuruf(String nilaiHuruf) {
         this.nilaiHuruf = nilaiHuruf;
-    } 
-    
-public String getCatatanGuru() {
+    }
+
+    public String getCatatanGuru() {
         return catatanGuru;
     }
 
     public void setCatatanGuru(String catatanGuru) {
         this.catatanGuru = catatanGuru;
-    }     
+    }
+
+    public SmesterEnum getSmester() {
+        return smester;
+    }
+
+    public void setSmester(SmesterEnum smester) {
+        this.smester = smester;
+    }
+
+    public KeteranganPelajaranEnum getKeterangan() {
+        return keterangan;
+    }
+
+    public void setKeterangan(KeteranganPelajaranEnum keterangan) {
+        this.keterangan = keterangan;
+    }
+    
+    
+    
     
 }
